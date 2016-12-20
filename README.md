@@ -1,2 +1,2 @@
 # MScThesis-MCpythiaDijet
-MC event generation for LHC dijet final states
+MC event generation for dijet and trijet event topologies produced at the LHC
