@@ -37,20 +37,20 @@ int main(int argc, char *argv[]) {
 	ofstream ofileRunParameters(ofilename.c_str());
 //	ofileRunParameters.open(ofilename.c_str());
 	if (!ofileRunParameters) cerr << "Cannot open output file." << endl;
-  ofileRunParameters << "Beams:idA = 2212\n";
-  ofileRunParameters << "Beams:idB = 2212\n";
-  ofileRunParameters << "Beams:eCM = 13000\n";
-  ofileRunParameters << "SigmaProcess:alphaSvalue = 0.13\n";
-  ofileRunParameters << "SigmaProcess:alphaSorder = 1\n";
-  ofileRunParameters << "HardQCD:all = on\n";
-  ofileRunParameters << "Random:setSeed = on\n";
-  ofileRunParameters << RndmSeed.c_str() << endl;
-  ofileRunParameters << "PhaseSpace:pTHatMin = 380\n";
+  	ofileRunParameters << "Beams:idA = 2212\n";
+  	ofileRunParameters << "Beams:idB = 2212\n";
+  	ofileRunParameters << "Beams:eCM = 13000\n";
+  	ofileRunParameters << "SigmaProcess:alphaSvalue = 0.13\n";
+  	ofileRunParameters << "SigmaProcess:alphaSorder = 1\n";
+  	ofileRunParameters << "HardQCD:all = on\n";
+  	ofileRunParameters << "Random:setSeed = on\n";
+  	ofileRunParameters << RndmSeed.c_str() << endl;
+  	ofileRunParameters << "PhaseSpace:pTHatMin = 380\n";
 	ofileRunParameters << "PhaseSpace:mHatMin = 2400\n";
-  ofileRunParameters << Nevents.c_str() << endl;
-  ofileRunParameters << "Next:numberShowEvent = 10\n";
-  ofileRunParameters << "Next:numberCount = 1000\n";
-  ofileRunParameters.close();
+  	ofileRunParameters << Nevents.c_str() << endl;
+  	ofileRunParameters << "Next:numberShowEvent = 10\n";
+  	ofileRunParameters << "Next:numberCount = 1000\n";
+  	ofileRunParameters.close();
 
 	Pythia pythia; // declare Pythia object
 	pythia.readFile(ofilename.c_str()); // import settings from the file created above
@@ -300,4 +300,3 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
-

@@ -37,22 +37,22 @@ int main(int argc, char *argv[]) {
 	ofstream ofileRunParameters(ofilename.c_str());
 //	ofileRunParameters.open(ofilename.c_str());
 	if (!ofileRunParameters) cerr << "Cannot open output file." << endl;
-  ofileRunParameters << "Beams:idA = 2212\n";
-  ofileRunParameters << "Beams:idB = 2212\n";
-  ofileRunParameters << "Beams:eCM = 13000\n";
-  ofileRunParameters << "SigmaProcess:alphaSvalue = 0.13\n";
-  ofileRunParameters << "SigmaProcess:alphaSorder = 1\n";
-  ofileRunParameters << "HardQCD:3parton = on\n";
-  ofileRunParameters << "Random:setSeed = on\n";
-  ofileRunParameters << RndmSeed.c_str() << endl;
-  ofileRunParameters << "PhaseSpace:RsepMin = 1\n";
-  ofileRunParameters << "PhaseSpace:pTHat3Min = 380\n";
-  ofileRunParameters << "PhaseSpace:pTHat5Min = 114\n";
-  ofileRunParameters << "PhaseSpace:mHatMin = 2400\n";
-  ofileRunParameters << Nevents.c_str() << endl;
-  ofileRunParameters << "Next:numberShowEvent = 10\n";
-  ofileRunParameters << "Next:numberCount = 1000\n";
-  ofileRunParameters.close();
+	ofileRunParameters << "Beams:idA = 2212\n";
+	ofileRunParameters << "Beams:idB = 2212\n";
+	ofileRunParameters << "Beams:eCM = 13000\n";
+	ofileRunParameters << "SigmaProcess:alphaSvalue = 0.13\n";
+	ofileRunParameters << "SigmaProcess:alphaSorder = 1\n";
+	ofileRunParameters << "HardQCD:3parton = on\n";
+  	ofileRunParameters << "Random:setSeed = on\n";
+  	ofileRunParameters << RndmSeed.c_str() << endl;
+  	ofileRunParameters << "PhaseSpace:RsepMin = 1\n";
+  	ofileRunParameters << "PhaseSpace:pTHat3Min = 380\n";
+  	ofileRunParameters << "PhaseSpace:pTHat5Min = 114\n";
+  	ofileRunParameters << "PhaseSpace:mHatMin = 2400\n";
+  	ofileRunParameters << Nevents.c_str() << endl;
+  	ofileRunParameters << "Next:numberShowEvent = 10\n";
+  	ofileRunParameters << "Next:numberCount = 1000\n";
+  	ofileRunParameters.close();
 
 	Pythia pythia; // declare Pythia object
 	pythia.readFile(ofilename.c_str()); // import settings from the file created above
@@ -198,15 +198,15 @@ int main(int argc, char *argv[]) {
 				leading_jet_pT.fill(slowjet.pT(0));
 				subleading_jet_pT.fill(slowjet.pT(1));
 				subsubleading_jet_pT.fill(slowjet.pT(2));
-    		leading_jet_y.fill(slowjet.y(0));
-    		subleading_jet_y.fill(slowjet.y(1));
-    		subsubleading_jet_y.fill(slowjet.y(2));
+    			leading_jet_y.fill(slowjet.y(0));
+    			subleading_jet_y.fill(slowjet.y(1));
+    			subsubleading_jet_y.fill(slowjet.y(2));
 				yStar.fill(ystar);
 				yBoost.fill(yboost);
 				leading_jet_phi.fill(slowjet.phi(0));
 				subleading_jet_phi.fill(slowjet.phi(1));
 				subsubleading_jet_phi.fill(slowjet.phi(2));
-/*			deltaR01.fill(leading_subleading_deltaR);
+/*				deltaR01.fill(leading_subleading_deltaR);
 				deltaR02.fill(leading_subsubleading_deltaR);
 				deltaR12.fill(subleading_subsubleading_deltaR);
 */
@@ -329,4 +329,3 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
-
