@@ -9,7 +9,7 @@ MC event generation for dijet and trijet event topologies produced at the LHC
 ### ./dijet01 j N > dijet01_j
 
 in which case the PYTHIA readout (run statistics, etc.) will be saved to a file called "dijet01_j" (otherwise it will be printed in the terminal)
-- running order of the strong coupling constant is set to 1
+- the running order of the strong coupling constant is set to 1
 - by default, PYTHIA SlowJet algorithm is set to anti-kT algorithm with pTmin = 50 GeV
 - kinematic phase space cuts: PhaseSpace:mHatMin = 2400, PhaseSpace:pTHatMin = 380
 - kinematic selection cut on leading (subleading) jet is 440 (50) GeV
