@@ -4,8 +4,8 @@ MC event generation for dijet and trijet event topologies produced at the LHC
 ##### dijet01.cc #####
 
 - the main function takes two arguments (via user input): a random number seed and the number of events to generate; in order to run N events with RndmNSeed j, for instance, one could type
-#make dijet01
-#./dijet01 j N > dijet01_j
+# make dijet01
+# ./dijet01 j N > dijet01_j
 in which case the PYTHIA readout (run statistics, etc.) will be saved to a file called "dijet01_j" (otherwise it will be printed in the terminal)
 - running order of the strong coupling constant is set to 1
 - by default, PYTHIA SlowJet algorithm is set to anti-kT algorithm with pTmin = 50 GeV
