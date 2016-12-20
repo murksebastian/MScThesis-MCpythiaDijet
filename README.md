@@ -3,6 +3,7 @@ MC event generation for dijet and trijet event topologies produced at the LHC
 
 ##### dijet01.cc #####
 
+- C++ macro used to generate dijet events with the LO MC event generator PYTHIA
 - the main function takes two arguments (via user input): a random number seed and the number of events to generate; in order to run N events with RndmNSeed j, for instance, one could type
 
 ### make dijet01
